@@ -1,0 +1,21 @@
+<div class="nes-container with-title is-rounded">
+  <p class="title">Login</p>
+  <form [formGroup]="signInForm" (ngSubmit)="onSubmit()" novalidate>
+    <div class="nes-field">
+      <label for="email">Email</label>
+      <input type="email" class="nes-input" id="email" formControlName="email" required>
+    </div>
+    <div class="nes-field">
+      <label for="password">Senha</label>
+      <input type="password" class="nes-input" id="password" formControlName="password" required>
+    </div>
+    <div class="action">
+      <button class="nes-btn" [ngClass]="{'is-success': !signInForm.invalid, 'is-disabled': signInForm.invalid}" type="submit">Fazer login</button>
+    </div>
+  </form>
+  <span class="nes-text is-error">{{error}}</span>
+</div>
+<div class="margin-top">
+  <button class="nes-btn is-primary" routerLink="/auth/signup">Criar conta</button>
+</div>
+

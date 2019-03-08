@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body {
+  height: 100%;
+}
+.margin-top {
+  margin-top: 16px;
+}
+app-signin, app-signup {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  .nes-container {
+    width: 500px;
+    form > div {
+      padding: 10px 0;
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
