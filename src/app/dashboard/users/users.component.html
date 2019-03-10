@@ -1,0 +1,21 @@
+<div class="nes-container with-title">
+  <p class="title">Usuários</p>
+  <div class="nes-table-responsive">
+    <table class="nes-table is-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users$ | async">
+          <td>{{user._id}}</td>
+          <td>{{user.name}}</td>
+          <td>{{user.email}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

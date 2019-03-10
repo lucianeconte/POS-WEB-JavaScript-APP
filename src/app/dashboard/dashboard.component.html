@@ -1,4 +1,19 @@
-<p>
-  dashboard works!
-</p>
-<router-outlet></router-outlet>
+<header>
+  <div class="nes-container is-centered">
+    <p>Desenvolvimento Web com JavaScript</p>
+  </div>
+</header>
+<div class="content">
+  <aside>
+    <button (click)="signOut()">Sair do sistema</button>
+    <div class="nes-container with-title is-centered">
+      <p class="title">Navegação</p>
+      <button type="button" class="nes-btn" *ngFor="let page of pages" [routerLink]="[page.path]" routerLinkActive="is-primary">
+        {{page.text}}
+      </button>
+    </div>
+  </aside>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</div>

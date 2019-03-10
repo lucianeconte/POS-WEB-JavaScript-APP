@@ -55,4 +55,8 @@ export class AuthService {
   get token() {
     return window.localStorage.getItem(this.TOKEN_KEY);
   }
+  signOut() {
+    window.localStorage.removeItem(this.AUTH_KEY);
+    window.localStorage.removeItem(this.TOKEN_KEY);
+  }
 }
