@@ -1,16 +1,14 @@
 <header>
-  <div class="nes-container is-centered">
-    <p>Desenvolvimento Web com JavaScript</p>
-  </div>
+  <h1>Desenvolvimento Web com JavaScript</h1>
 </header>
-<div class="content">
+<div>
   <aside>
     <button (click)="signOut()">Sair do sistema</button>
-    <div class="nes-container with-title is-centered">
-      <p class="title">Navegação</p>
-      <button type="button" class="nes-btn" *ngFor="let page of pages" [routerLink]="[page.path]" routerLinkActive="is-primary">
+    <div>
+      <h3>Navegação</h3>
+      <a *ngFor="let page of pages" [routerLink]="[page.path]" routerLinkActive="active">
         {{page.text}}
-      </button>
+      </a>
     </div>
   </aside>
   <main>
