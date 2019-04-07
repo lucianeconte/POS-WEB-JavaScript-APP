@@ -23,7 +23,7 @@
         <td>{{i.endereco}}</td>
         <td>{{i.proprietario}}</td>
         <td>
-          <a [routerLink]="['update,i._id']">Editar</a>
+          <a [routerLink]="['update',i._id]">Editar</a>
           <button type="button" (click)="onDelete(i._id)">
             Apagar
           </button>
