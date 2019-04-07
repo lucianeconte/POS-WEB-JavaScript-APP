@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment.prod';
+//import { environment } from 'src/environments/environment.prod';
+import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Imovel } from '../imovel';
-import { take } from 'rxjs/operators';
-import { delay } from 'q';
+import { take, delay, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -16,10 +16,10 @@ export class ImovelService {
   ) { }
   findAll(): Observable<Imovel[]> {//observable fica observando se tem alteração e retorna
     return this.http.get<Imovel[]>(this.endpoint)
-     /* .pipe(
-        delay(1000),
+      /*.pipe(
+        delay(800),
         tap(console.log)
-      )*/
+      );*/
   }
   findOne(id: string): Observable<Imovel> {
     return this.http.get<Imovel>(this.endpoint + '/' + id)

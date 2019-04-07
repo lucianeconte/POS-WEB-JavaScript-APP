@@ -24,7 +24,7 @@ export class ImoveisListComponent implements OnInit {
     this.imovelService.delete(id).subscribe(
       (response) => {
         console.log(response),
-        this.onRefresh
+        this.onRefresh()
       },
       (error) => {
         console.error(error)

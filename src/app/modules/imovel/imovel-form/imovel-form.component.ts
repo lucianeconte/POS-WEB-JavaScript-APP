@@ -8,13 +8,13 @@ import { FormGroup } from '@angular/forms';
 })
 export class ImovelFormComponent implements OnInit {
   @Input() parentForm: FormGroup;
-  @Output() onsubmit = new EventEmitter(); //usar o import angular/core
+  @Output() onSubmit = new EventEmitter(); //usar o import angular/core
   constructor() { }
 
   ngOnInit() {
   }
   submit() {
-    this.onsubmit.emit();
+    this.onSubmit.emit();
   }
 
 }

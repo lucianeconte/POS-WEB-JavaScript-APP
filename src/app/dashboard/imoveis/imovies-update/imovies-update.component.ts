@@ -23,12 +23,12 @@ export class ImoviesUpdateComponent implements OnInit {
     this.imovelForm = this.fb.group({
       tipo: [null, Validators.required],
       descricao: [null, Validators.required],
-      preco: [null, Validators.required],
-      endereco: [null, Validators.required],
       locacao_venda: [null, Validators.required],
+      preco: [null, Validators.required],
       ativo: [null, Validators.required],
+      endereco: [null, Validators.required],
       proprietario: []
-    })
+    });
    }
 
 

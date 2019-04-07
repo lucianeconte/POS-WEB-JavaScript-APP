@@ -2,9 +2,9 @@ export interface Imovel {
     _id? : string;
     tipo: string;
     descricao: string;
-    preco: number;
     locacao_venda: string;
-    endereco: string;
+    preco: number;
     ativo: boolean;
+    endereco: string;
     proprietario? : string;
 }

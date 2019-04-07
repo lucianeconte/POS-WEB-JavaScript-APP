@@ -8,22 +8,23 @@
       <tr>
         <th>Tipo</th>
         <th>Descrição</th>
-        <th>Preço</th>
-        <th>Endereço</th>
         <th>Locação / Venda</th>
+        <th>Preço</th>
         <th>Ativo</th>
+        <th>Endereço</th>
         <th>Proprietário</th>
       </tr>
-      <tr *ngFor="let p of imoveis">
-        <td>{{p.tipo}}</td>
-        <td>{{p.descricao}}</td>
-        <td>{{p.preco | currency}}</td>
-        <td>{{p.endereco}}</td>
-        <td>{{p.ativo}}</td>
-        <td>{{p.proprietario}}</td>
+      <tr *ngFor="let i of imoveis">
+        <td>{{i.tipo}}</td>
+        <td>{{i.descricao}}</td>
+        <td>{{i.locacao_venda}}</td>
+        <td>{{i.preco | currency}}</td>
+        <td>{{i.ativo}}</td>
+        <td>{{i.endereco}}</td>
+        <td>{{i.proprietario}}</td>
         <td>
-          <a [routerLink]="['update,p._id']">Editar</a>
-          <button type="button" (click)="onDelete(p._id)">
+          <a [routerLink]="['update,i._id']">Editar</a>
+          <button type="button" (click)="onDelete(i._id)">
             Apagar
           </button>
         </td>

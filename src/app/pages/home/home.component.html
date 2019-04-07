@@ -1,6 +1,6 @@
 <div>
   <h1>Imóveis</h1>
-  <div *ngIf="imoveis$ | asyn as imovies; else loading">
+  <div *ngIf="imoveis$ | async as imoveis; else loading">
     <div *ngFor="let i of imoveis">
       <header>
         <h2>{{i.tipo}} - {{i.descricao}} - {{i.locacao_venda}}</h2>
