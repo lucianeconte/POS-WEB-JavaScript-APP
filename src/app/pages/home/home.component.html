@@ -1,0 +1,12 @@
+<div>
+  <h1>Imóveis</h1>
+  <div *ngIf="imoveis$ | asyn as imovies; else loading">
+    <div *ngFor="let i of imoveis">
+      <header>
+        <h2>{{i.tipo}} - {{i.descricao}} - {{i.locacao_venda}}</h2>
+        <h3>{{i.preco|currency:'BRL'}}</h3>
+        <small>{{i.endereco}} - Proprietário: {{i.proprietario}}</small>
+      </header>
+    </div>
+  </div>
+</div>

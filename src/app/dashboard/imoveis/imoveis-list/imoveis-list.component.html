@@ -1,0 +1,36 @@
+<div>
+  <h2>Imóveis</h2>
+  <nav>
+    <a routerLink="create">Novo Imóvel</a>
+  </nav>
+  <div *ngIf="imoveis$ | async as imoveis; else loading">
+    <table>
+      <tr>
+        <th>Tipo</th>
+        <th>Descrição</th>
+        <th>Preço</th>
+        <th>Endereço</th>
+        <th>Locação / Venda</th>
+        <th>Ativo</th>
+        <th>Proprietário</th>
+      </tr>
+      <tr *ngFor="let p of imoveis">
+        <td>{{p.tipo}}</td>
+        <td>{{p.descricao}}</td>
+        <td>{{p.preco | currency}}</td>
+        <td>{{p.endereco}}</td>
+        <td>{{p.ativo}}</td>
+        <td>{{p.proprietario}}</td>
+        <td>
+          <a [routerLink]="['update,p._id']">Editar</a>
+          <button type="button" (click)="onDelete(p._id)">
+            Apagar
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <ng-template #loading>
+    Carregando Imóveis
+  </ng-template>
+</div>

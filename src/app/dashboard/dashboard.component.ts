@@ -9,8 +9,11 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
   pages = [{
-    path: '/users',
+    path: 'users',
     text: 'Usuários'
+  }, {
+    path: 'imoveis',
+    text: 'Imóveis'
   }]
   constructor(
     private auth: AuthService,

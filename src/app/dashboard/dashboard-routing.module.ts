@@ -13,6 +13,10 @@ const routes: Routes = [
         component: UsersComponent
       },
       {
+        path: 'imoveis',
+        loadChildren: './imoveis/imoveis.module#ImoveisModule'
+      },
+      {
         path: '',
         redirectTo: 'users'
       }
