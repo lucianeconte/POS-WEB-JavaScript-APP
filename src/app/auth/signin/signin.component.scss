@@ -1,0 +1,8 @@
+:host {
+    font-family: Arial, Helvetica, sans-serif;
+    mat-card > mat-card-actions {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+  }

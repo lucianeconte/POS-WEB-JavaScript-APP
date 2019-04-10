@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
   <h1>Imóveis</h1>
   <div *ngIf="imoveis$ | async as imoveis; else loading">
     <div *ngFor="let i of imoveis">
@@ -9,4 +9,13 @@
       </header>
     </div>
   </div>
-</div>
+</div> -->
+<mat-card *ngFor="let i of imoveis$ | async">
+  <mat-card-title>{{i.tipo}} - <b>{{i.locacao_venda}}</b></mat-card-title>
+  <mat-card-content>{{i.preco|currency:'BRL'}}</mat-card-content>
+  <mat-card-title>{{i.descricao}}</mat-card-title>
+  <mat-list dense>
+    <mat-divider></mat-divider>
+  <mat-card-title><p>{{i.endereco}}</p></mat-card-title>
+  </mat-list>
+</mat-card>
